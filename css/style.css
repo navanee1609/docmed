@@ -972,13 +972,13 @@ h3 {
 .header-area .main-header-area .main-menu ul li {
   display: inline-block;
   position: relative;
-  margin: 0 10px;
+  margin: 0 6px;
 }
 
 /* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
   color: #727272;
-  font-size: 15px;
+  font-size: 12px;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
@@ -991,14 +991,14 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -1061,7 +1061,7 @@ h3 {
   left: 0;
   top: 160%;
   background: #fff;
-  width: 200px;
+  width: 120px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
   opacity: 0;
@@ -1080,7 +1080,7 @@ h3 {
 
 /* line 186, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li a {
-  padding: 10px 15px;
+  padding: 10px 10px;
   position: inherit;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
