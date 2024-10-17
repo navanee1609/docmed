@@ -870,14 +870,15 @@ h3 {
 @media (max-width: 767px) {
   /* line 45, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
-    width: 70px;
+    margin-top: 12px;
+    width: 100px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 45, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
-    width: 70px;
+    width: 100px;
   }
 }
 
