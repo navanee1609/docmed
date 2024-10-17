@@ -192,20 +192,46 @@ h3 {
   background: #f5f5f5;
 }
 
-/* line 132, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
-.bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
+.text_bg_section {
+  position: relative;
+  height: 600px; /* Adjust height as needed */
 }
 
-/* line 135, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
-.bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
+.text_bg_section .responsive-img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes any bottom space below the image */
 }
 
-/* line 138, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
-.cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
+@media (max-width: 767px) {
+  .text_bg_section {
+      height: auto; /* Adjust height for smaller screens */
+  }
 }
+
+
+
+
+.button-container {
+  text-align: center; /* Center text within the container */
+}
+
+.appointment-button {
+  display: inline-block; /* Makes the link behave like a button */
+  padding: 15px 30px; /* Add padding for size */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.appointment-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 
 /* line 143, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
 .overlay {
@@ -1317,10 +1343,85 @@ h3 {
   }
 }
 
+.slider_area .single_slider {
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (max-width: 767px) {
+  /* line 8, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider {
+    height: 420px;
+  }
+}
+
+/* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+.slider_area .single_slider .slider_text h3 {
+  color: #1F1F1F;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* line 24, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+.slider_area .single_slider .slider_text h3 span {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text h3 {
+    font-size: 33px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text h3 {
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+}
+
+/* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+.slider_area .single_slider .slider_text p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #727272;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text p {
+    font-size: 16px;
+  }
+}
+
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
 .welcome_docmed_area {
   padding-top: 120px;
-  padding-bottom: 220px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
@@ -1497,19 +1598,37 @@ h3 {
 
 /* line 111, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
 .business_expert_area {
-  padding-bottom: 100px;
+  padding: 40px 0; /* Adjust padding as needed */
 }
 
-@media (max-width: 767px) {
-  /* line 111, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
-  .business_expert_area {
-    padding-bottom: 50px;
+@media (max-width: 992px) {
+  .business_expert_area .row {
+      flex-direction: column; /* Stack items vertically on mobile/tablet */
+      text-align: center; /* Center-align text for mobile/tablet */
+      margin: 0; /* Remove margin between columns */
+  }
+
+  .col-md-6 {
+      padding-left: 0; /* Remove left padding */
+      padding-right: 0; /* Remove right padding */
+  }
+
+  .expert_info {
+      padding-right: 0; /* Remove padding on mobile */
+  }
+
+  .expert_image {
+      margin-bottom: 20px; /* Add margin below the image */
   }
 }
 
-/* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
-.business_expert_area .business_info .icon i {
-  background: #5DB2FF;
+.expert_info {
+  padding-right: 30px; /* Space between text and image on larger screens */
+  text-align: left; /* Align text to the left on larger screens */
+}
+
+.expert_info .icon i {
+  background: #5DB2FF; /* Icon background color */
   width: 75px;
   height: 75px;
   display: inline-block;
@@ -1518,23 +1637,52 @@ h3 {
   text-align: center;
   line-height: 75px;
   border-radius: 50%;
+  margin-bottom: 20px; /* Space below icon */
 }
 
-/* line 130, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
-.business_expert_area .business_info h3 {
-  font-size: 20px;
+.expert_name {
+  font-size: 24px; /* Increased font size */
   font-weight: 500;
   color: #1F1F1F;
   margin-top: 16px;
-  margin-bottom: 14px;
+  margin-bottom: 8px; /* Space between name and title */
 }
 
-/* line 137, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
-.business_expert_area .business_info p {
-  color: #727272;
-  line-height: 28px;
-  margin-bottom: 0;
+.expert_title {
+  font-size: 18px; /* Smaller size for title */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #3A3A3A; /* Slightly darker color */
+  margin-bottom: 16px; /* Space below title */
 }
+
+.expert_description {
+  color: #727272; /* Text color */
+  line-height: 1.9; /* Improved line height for readability */
+  margin-bottom: 16px; /* Space between paragraphs */
+}
+
+/* Ensure image is responsive and square */
+.expert_image {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.square-img {
+  width: 100%; /* Full width of the container */
+  height: 600; /* Maintain aspect ratio */
+  max-width: 450px; /* Set max width for square */
+  aspect-ratio: 1; /* Maintain square shape */
+}
+
+.square-image-2{
+  width: 100%; /* Full width of the container */
+  height: 400; /* Maintain aspect ratio */
+  max-width: 350px; /* Set max width for square */
+  aspect-ratio: 1; 
+}
+
 
 @media (max-width: 767px) {
   /* line 143, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
@@ -2888,7 +3036,6 @@ h3 {
   line-height: 28px;
   color: #fff;
   margin-top: 10px;
-  margin-bottom: 26px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2938,6 +3085,7 @@ h3 {
 
 /* line 22, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_experts.scss */
 .expert_doctors_area .single_expert .expert_thumb {
+  margin: 0 auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
@@ -3252,7 +3400,7 @@ h3 {
 
 /* line 133, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_contact.scss */
 .contact-section {
-  padding: 130px 0 100px;
+  padding: 70px 0 50px;
 }
 
 @media (max-width: 991px) {
@@ -3265,7 +3413,7 @@ h3 {
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 133, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_contact.scss */
   .contact-section {
-    padding: 80px 0 50px;
+    padding: 10px 0 30px;
   }
 }
 
