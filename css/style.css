@@ -1251,6 +1251,16 @@ h3 {
   }
 }
 
+.single_department {
+  border: 1px solid #5DB2FF; /* Add outline color */
+}
+
+.single_department:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+
 /* line 281, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
 .header-area .header-top_area .short_contact_list ul li a i {
   color: #5DB2FF;
@@ -3200,6 +3210,33 @@ h3 {
   position: relative;
   top: 0px;
 }
+
+.expert_doctors_area {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.expert_doctors_area .single_expert .expert_thumb img {
+  width: 100%;
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure image is cropped to fit the area */
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #009DFF;
+  color: white;
+  border-radius: 50px; /* Rounded button */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.learn-more-btn:hover {
+  background-color: #007ACC;
+}
+
 
 /* line 3, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_emergency_contact.scss */
 .Emergency_contact .single_emergency {
@@ -6403,3 +6440,628 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* testimonial */
+
+.testimonial_section {
+  background-color: #f0f8ff; /* Background color of the section */
+  padding: 40px 20px; /* Padding around the section */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.testimonial_section h2 {
+  text-align: center; /* Center align the heading */
+  font-size: 28px; /* Font size for heading */
+  color: #333; /* Text color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.testimonial_section p {
+  text-align: center; /* Center align paragraphs */
+  font-size: 18px; /* Font size for paragraphs */
+  color: #555; /* Text color */
+  margin: 0 0 20px; /* Margin around paragraphs */
+}
+
+.center-text {
+  line-height: 1.6; /* Improved line height */
+}
+
+.testimonial_images {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the images */
+  gap: 50px; /* Space between images */
+  margin-bottom: 20px; /* Space below images */
+}
+
+.testimonial_img {
+  width: 15%; /* Reduced maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Animation effect */
+  margin-bottom: 10px; /* Space below images */
+}
+
+.testimonial_img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.review_input {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center align the input and button */
+  align-items: center; /* Vertically center */
+  gap: 10px; /* Space between input and button */
+}
+
+.review_box {
+  width: 300px; /* Width of the input box */
+  padding: 10px; /* Padding inside the input box */
+  border: 1px solid #ccc; /* Border around the input */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+.send_button {
+  background-color: #5DB2FF; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 8px 10px; /* Padding around the button */
+  cursor: pointer; /* Pointer on hover */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  transition: background-color 0.3s, transform 0.3s; /* Transition effect */
+}
+
+.send_button:hover {
+  background-color: #4A9EDB; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.send_button svg {
+  width: 18px; /* Adjusted size of the SVG */
+  height: 18px; /* Adjusted size of the SVG */
+  fill: white; /* Fill color of SVG */
+}
+
+.review-request {
+  margin-top: 20px; /* Space above the review request text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review_input {
+      flex-direction: column; /* Stack input and button on smaller screens */
+      align-items: stretch; /* Stretch items to full width */
+  }
+  
+  .review_box {
+      width: 100%; /* Full width for input on mobile */
+  }
+
+  .testimonial_images {
+      flex-direction: column; /* Stack images on smaller screens */
+      align-items: center; /* Center align images */
+  }
+
+  .testimonial_img {
+      max-width: 80%; /* Allow images to scale down */
+  }
+}
+
+
+/* services */
+
+.services_area {
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.service-container {
+  display: flex; /* Use flexbox to align items */
+  flex-wrap: wrap; /* Allow wrapping of columns */
+  justify-content: center; /* Center the boxes */
+}
+
+.service_box {
+  background: #fff; /* White background for the boxes */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+  flex: 0 1 30%; /* Take up to 30% of the container width */
+  margin: 10px; /* Space between boxes */
+  height: 400px; /* Fixed height for uniformity */
+  display: flex; /* Allow flex on children */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Evenly distribute space */
+}
+
+.service_box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.service_icon {
+  margin-bottom: 15px; /* Space between icon and heading */
+}
+
+.service_icon svg {
+  width: 40px; /* Size of the SVG icon */
+  height: 40px; /* Size of the SVG icon */
+}
+
+h4 {
+  margin: 15px 0; /* Space above and below the heading */
+  font-size: 1.5rem; /* Heading size */
+  color: #333; /* Dark text color */
+}
+
+ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+ul li {
+  margin: 10px 0; /* Space between list items */
+  font-size: 1rem; /* List item font size */
+  color: #666; /* Lighter text color */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .service_box {
+      height: auto; /* Allow auto height on smaller screens */
+      padding: 15px; /* Less padding on smaller screens */
+  }
+
+  h4 {
+      font-size: 1.25rem; /* Smaller heading size */
+  }
+
+  ul li {
+      font-size: 0.9rem; /* Smaller list item font size */
+  }
+}
+
+
+/* footer */
+.footer_area {
+  background-color: #F5FBFF; /* Footer background color */
+  padding: 40px 20px; /* Padding for the footer */
+}
+
+.footer_row {
+  display: flex; /* Use flexbox for equal spacing */
+  justify-content: space-between; /* Equal spacing between columns */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer_col {
+  margin-bottom: 20px; /* Space between columns */
+  padding: 0 15px; /* Padding within columns */
+}
+
+.footer_col:first-child {
+  flex: 0 0 40%; /* Increase width for the first column */
+}
+
+.footer_col:not(:first-child) {
+  flex: 0 0 20%; /* Default width for other columns */
+}
+
+.footer_logo_img {
+  width: 100%; /* Responsive logo */
+  max-width: 150px; /* Maximum width for the logo */
+}
+
+.footer_description {
+  margin: 15px 0; /* Space around the description */
+  font-size: 14px; /* Font size for description */
+  color: #666; /* Color for description text */
+}
+
+.social_icons {
+  display: flex; /* Use flexbox for social icons */
+  gap: 15px; /* Space between icons */
+}
+
+.social_icon {
+  color: #333; /* Color for social icons */
+  font-size: 18px; /* Size for social icons */
+  border: 1px solid #828bb2; /* Border for the icon */
+  border-radius: 50%; /* Rounded border */
+  padding: 5px 12px; /* Padding for a better clickable area */
+  transition: background-color 0.3s, color 0.3s; /* Transition effect for hover */
+}
+
+.social_icon:hover {
+  background-color: #007bff; /* Background color on hover */
+  color: #fff; /* Color change on hover */
+}
+
+.footer_col h4 {
+  font-size: 18px; /* Font size for headings */
+  margin-bottom: 15px; /* Space below headings */
+  color: #333; /* Color for headings */
+}
+
+.footer_col ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+.footer_col ul li {
+  margin: 10px 0; /* Space between list items */
+  font-size: 14px; /* Font size for list items */
+  color: #666; /* Color for list items */
+}
+
+.footer_col ul li a {
+  color: #666; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer_col ul li a:hover {
+  color: #007bff; /* Link color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer_area {
+      padding: 20px; /* Less padding on smaller screens */
+  }
+
+  .footer_row {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+      align-items: center; /* Center content on smaller screens */
+  }
+
+  .footer_col {
+      text-align: center; /* Center content within columns */
+      margin-bottom: 30px; /* More space below columns */
+      flex: 1; /* Allow columns to grow equally */
+      min-width: 220px; /* Minimum width for columns */
+  }
+
+  .footer_col:first-child {
+      flex: none; /* Reset flex for the first column on small screens */
+  }
+  .social_icons {
+    display: flex; /* Use flexbox for social icons */
+    justify-content: center; /* Center the icons */
+    gap: 15px; /* Space between icons */
+  }
+}
+
+/* copyright */
+
+.copyright_section {
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Margin above and below the section */
+}
+
+.border_line {
+  border-top: 2px solid #ccc; /* Line style */
+  width: 80%; /* Width of the line */
+  margin: 0 auto; /* Center align the line */
+}
+
+.copyright_text {
+  margin-top: 10px; /* Space above the copyright text */
+  font-size: 16px; /* Font size for the copyright text */
+  color: #666; /* Text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .copyright_text {
+      font-size: 14px; /* Adjust font size on smaller screens */
+  }
+}
+
+.business_info .icon {
+  background-color: #009DFF;
+  color: #ffffff; /* Set icon color to white */
+  border-radius: 50%; /* Make the icon rounded */
+  padding: 20px; /* Add padding inside the icon */
+  display: inline-block; /* Ensure icon is inline */
+  font-size: 24px; /* Adjust icon size as needed */
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  line-height: 30px; /* Vertical alignment for the icon */
+}
+
+.footer_area {
+  background-color: #F5FBFF;
+  padding: 40px 20px;
+}
+
+.footer_row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer_col {
+  flex: 0 0 33.33%; /* Equal column width */
+  margin-bottom: 20px;
+}
+
+.footer_logo_img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.footer_description {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.social_icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social_icon {
+  font-size: 18px;
+  border: 1px solid #828bb2;
+  border-radius: 50%;
+  padding: 5px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social_icon:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.footer_col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.footer_col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_col ul li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer_col ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer_col ul li a:hover {
+  color: #007bff;
+}
+
+/* Bottom Section (Copyright and Links) */
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.footer_copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer_copyright p {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer_links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_links li {
+  font-size: 14px;
+}
+
+.footer_donotsell{
+  text-align: center;
+}
+.footer_donotsell a {
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer_donotsell a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer_row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer_col {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .footer_bottom {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer_links {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  .footer_donotsell {
+      margin-top: 20px;
+  }
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
+}
+
+.footer_copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures full width so space-between works */
+    gap: 20px; /* Adds space between the elements */
+}
+
+.footer_copyright p {
+    margin: 0; /* Remove margin to align properly */
+    font-size: 14px;
+    color: #666;
+}
+
+.footer_links {
+    display: flex;
+    gap: 20px; /* Space between Terms & Conditions and Privacy Policy */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li {
+    font-size: 14px;
+}
+
+
+.footer_copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures full width so space-between works */
+    gap: 20px; /* Adds space between the elements */
+}
+
+.footer_copyright p {
+    margin: 0; /* Remove margin to align properly */
+    font-size: 14px;
+    color: #666;
+}
+
+.footer_links {
+    display: flex;
+    gap: 20px; /* Space between Terms & Conditions and Privacy Policy */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li {
+    font-size: 14px;
+}
+
+
+/* Modal Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  justify-content: center; /* Center the modal */
+  align-items: center; /* Center vertically */
+}
+
+/* Modal Content Box */
+.modal_content {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+/* Close Button (X) */
+.close_modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Heading in Modal */
+.modal_content h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Text */
+.modal_content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Buttons in Modal */
+.modal_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Modal Buttons */
+.modal_buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal_buttons button#cancel_btn {
+  background-color: #ccc; /* Grey for the cancel button */
+}
+
+/* Button Hover Effects */
+.modal_buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.modal_buttons button#cancel_btn:hover {
+  background-color: #999;
+}
+
+/* Responsive: For smaller screens */
+@media (max-width: 600px) {
+  .modal_content {
+      width: 90%; /* Adjust modal width */
+  }
+}
