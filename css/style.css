@@ -5338,6 +5338,13 @@ h6 {
   font-size: 13px;
   margin-right: 5px;
 }
+.subheading {
+  font-size: 16px; /* Adjust font size as needed */
+  color: #666; /* Set color for the subheading */
+  margin-top: 10px; /* Space between the main heading and the subheading */
+  font-weight: normal; /* Use normal weight to differentiate from main heading */
+}
+
 
 /* line 577, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_blog.scss */
 .blog-info-link li::after {
@@ -6874,6 +6881,7 @@ ul li {
 
 .footer_links li {
   font-size: 14px;
+  color: #666666;
 }
 
 .footer_donotsell{
@@ -6980,88 +6988,135 @@ ul li {
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .footer_copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures full width so space-between works */
+    gap: 20px; /* Adds space between the elements */
+}
+}
 
 /* Modal Overlay */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top */
+  position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-  justify-content: center; /* Center the modal */
-  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background with transparency */
+  justify-content: center;
+  align-items: center; /* Centers the modal content vertically */
+  padding: 20px; /* Add padding for smaller screens */
 }
 
-/* Modal Content Box */
+/* Modal Content */
 .modal_content {
   background-color: #fff; /* White background */
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 500px;
+  padding: 40px; /* More padding */
+  border-radius: 12px; /* Rounded corners */
   width: 100%;
+  max-width: 600px; /* Set max-width for larger screens */
+  height: 500px; /* Auto height to adjust based on content */
+  max-height: 90vh; /* Ensure modal doesn't overflow viewport height */
+  overflow-y: auto; /* Enable scroll if content exceeds max-height */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
-  text-align: center;
 }
 
-/* Close Button (X) */
+/* Close Button (X) Styles */
 .close_modal {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  right: 20px;
+  top: 20px;
+  font-size: 36px; /* Larger size for the X button */
   cursor: pointer;
+  color: #333; /* Darker X icon */
+  transition: color 0.3s ease;
 }
 
-/* Heading in Modal */
+.close_modal:hover {
+  color: #ff3b3b; /* Red color on hover */
+}
+
+/* Modal Heading Styles */
 .modal_content h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* Paragraph Text */
-.modal_content p {
-  font-size: 14px;
+  font-size: 24px;
   margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Center the heading */
 }
 
-/* Buttons in Modal */
+/* Modal Text Styles */
+.modal_content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: #555;
+  text-align: center; /* Center the paragraph */
+}
+
+/* Icon Button Styles */
 .modal_buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 20px; /* Add space between buttons */
 }
 
-/* Modal Buttons */
-.modal_buttons button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
+.modal_buttons i {
+  font-size: 40px; /* Larger icons */
+  color: #007bff; /* Primary color */
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
-.modal_buttons button#cancel_btn {
-  background-color: #ccc; /* Grey for the cancel button */
+.modal_buttons i:hover {
+  color: #0056b3; /* Darker on hover */
+}
+/* Style for anchor buttons */
+.modal_buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Text color */
+  border-radius: 6px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center the text */
+  cursor: pointer;
 }
 
-/* Button Hover Effects */
-.modal_buttons button:hover {
+.modal_buttons a:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-.modal_buttons button#cancel_btn:hover {
-  background-color: #999;
+#cancel_btn{
+  background-color: #707070;
+}
+#donotsell_link{
+  color: #666666;
 }
 
-/* Responsive: For smaller screens */
-@media (max-width: 600px) {
+/* Responsive Media Queries */
+@media (max-width: 768px) {
   .modal_content {
-      width: 90%; /* Adjust modal width */
+      max-width: 100%; /* Full width for smaller screens */
+      padding: 20px; /* Reduce padding */
+  }
+
+  .close_modal {
+      font-size: 28px; /* Reduce size of the close button */
+  }
+
+  .modal_buttons i {
+      font-size: 30px; /* Smaller buttons on small screens */
   }
 }
