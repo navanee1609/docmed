@@ -1681,11 +1681,15 @@ h3 {
 
 .square-img {
   width: 100%; /* Full width of the container */
-  height: 600; /* Maintain aspect ratio */
-  max-width: 450px; /* Set max width for square */
+  height: 100%; /* Maintain aspect ratio */
+  max-width: 400px; /* Set max width for square */
   aspect-ratio: 1; /* Maintain square shape */
 }
-
+.desai_image img{
+  height: 500px;
+  width: 500px;
+  display: none;
+}
 .square-image-2{
   width: 100%; /* Full width of the container */
   height: 400; /* Maintain aspect ratio */
@@ -3218,7 +3222,6 @@ h3 {
 
 .expert_doctors_area .single_expert .expert_thumb img {
   width: 100%;
-  height: 300px; /* Set a fixed height for uniformity */
   object-fit: cover; /* Ensure image is cropped to fit the area */
 }
 
@@ -6859,7 +6862,7 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding-top: 20px;
   border-top: 1px solid #ccc;
 }
 
@@ -6879,9 +6882,13 @@ ul li {
   gap: 20px;
 }
 
-.footer_links li {
+.footer_links li a{
   font-size: 14px;
   color: #666666;
+}
+
+.footer_links li a:hover{
+  color: #007bff;
 }
 
 .footer_donotsell{
@@ -6894,8 +6901,8 @@ ul li {
   text-align: center;
 }
 
-.footer_donotsell a:hover {
-  text-decoration: underline;
+#donotsell_link:hover{
+  color: #007bff;
 }
 
 /* Responsive Design */
